@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#16160f;--ink2:#3d3d35;--ink3:#787870;--rule:#e2ddd6;--cream:#f9f7f3;--white:#ffffff;--green:#1e4d2b;--green2:#2d6e3e;--green-light:#e8f2eb;--gold:#7a5c1e}
+:root{--ink:#16160f;--ink2:#3d3d35;--ink3:#787870;--rule:#e2ddd6;--cream:#f9f7f3;--white:#ffffff;--green:#1e4d2b;--green2:#2d6e3e;--green-light:#e8f2eb}
 html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;font-weight:300;background:var(--white);color:var(--ink);line-height:1.7;overflow-x:hidden}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
@@ -63,9 +63,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display
 .p-title em{font-style:italic;color:#8db89a}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,0.06)}
 .step{background:var(--ink);padding:1.75rem}
-.step-n{font-family:'Cormorant Garamond',serif;font-size:2.75rem;font-weight:300;color:rgba(255,255,255,0.07);line-height:1;margin-bottom:1.25rem}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:2.75rem;font-weight:300;color:rgba(141,184,154,0.65);line-height:1;margin-bottom:1.25rem}
 .step-t{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;color:#fff;margin-bottom:0.6rem}
-.step-d{font-size:0.8rem;color:rgba(255,255,255,0.38);line-height:1.75}
+.step-d{font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.75}
 .why{padding:5.5rem 3rem;background:var(--cream)}
 .why-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
 .why-eyebrow{font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:500;margin-bottom:0.875rem}
@@ -77,15 +77,35 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display
 .stat{padding:1.6rem;background:var(--white);border:1px solid var(--rule)}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;color:var(--green);line-height:1;margin-bottom:0.4rem}
 .stat-label{font-size:0.72rem;color:var(--ink3);line-height:1.6}
-.sectors{padding:5.5rem 3rem}
+.sectors{padding:5.5rem 3rem;background:var(--white)}
 .sectors-inner{max-width:1100px;margin:0 auto}
-.sector-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
-.sector-card{border:1px solid var(--rule);padding:1.75rem}
-.sc-icon{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--green);margin-bottom:0.875rem;font-style:italic}
-.sc-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--ink);margin-bottom:0.4rem}
-.sc-desc{font-size:0.8rem;color:var(--ink3);line-height:1.7}
-.sc-tags{margin-top:0.875rem;display:flex;flex-wrap:wrap;gap:5px}
-.sc-tag{font-size:0.58rem;letter-spacing:1px;text-transform:uppercase;background:var(--green-light);color:var(--green);padding:3px 8px}
+.sector-featured{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:3rem}
+.sector-feat{background:var(--white);padding:2.25rem 1.75rem;transition:background 0.2s}
+.sector-feat:hover{background:var(--green-light)}
+.sf-eyebrow{font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:500;margin-bottom:0.75rem}
+.sf-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:0.5rem}
+.sf-desc{font-size:0.82rem;color:var(--ink3);line-height:1.75;margin-bottom:1rem}
+.sf-tags{display:flex;flex-wrap:wrap;gap:5px}
+.sf-tag{font-size:0.58rem;letter-spacing:1px;text-transform:uppercase;background:var(--green-light);color:var(--green);padding:3px 8px}
+.sector-also-label{font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:1rem;margin-top:2.5rem}
+.sector-grid-small{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule)}
+.sector-small{background:var(--cream);padding:1.5rem;transition:background 0.2s}
+.sector-small:hover{background:var(--white)}
+.ss-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--ink);margin-bottom:0.3rem}
+.ss-desc{font-size:0.78rem;color:var(--ink3);line-height:1.65;margin-bottom:0.75rem}
+.ss-tags{display:flex;flex-wrap:wrap;gap:4px}
+.ss-tag{font-size:0.55rem;letter-spacing:1px;text-transform:uppercase;background:var(--green-light);color:var(--green);padding:2px 7px}
+.reviews{padding:5.5rem 3rem;background:var(--cream)}
+.reviews-inner{max-width:1100px;margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.review-card{border:1px solid var(--rule);padding:2rem;background:var(--white)}
+.review-stars{display:flex;gap:2px;margin-bottom:1rem}
+.review-stars span{color:var(--green);font-size:0.8rem}
+.review-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.65;margin-bottom:1.5rem}
+.review-author{display:flex;align-items:center;gap:0.75rem;border-top:1px solid var(--rule);padding-top:1.25rem}
+.review-initials{width:36px;height:36px;background:var(--green);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:500;flex-shrink:0}
+.review-name{font-size:0.8rem;font-weight:500;color:var(--ink)}
+.review-role{font-size:0.72rem;color:var(--ink3);margin-top:2px}
 .cta-band{padding:5.5rem 3rem;text-align:center;background:var(--green)}
 .cta-eyebrow{font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:500;margin-bottom:0.875rem}
 .cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.1;letter-spacing:-0.5px;margin-bottom:1.1rem}
@@ -101,14 +121,14 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
 @media(max-width:900px){
   .hero-inner,.why-inner{grid-template-columns:1fr}
   .hero-cards{display:none}
-  .services-grid,.steps,.sector-grid,.stats{grid-template-columns:1fr 1fr}
+  .services-grid,.steps,.stats,.sector-featured,.sector-grid-small,.reviews-grid{grid-template-columns:1fr 1fr}
   nav{padding:1rem 1.5rem}
   .nav-links{display:none}
-  .section,.process,.why,.sectors,.cta-band{padding:4rem 1.5rem}
+  .section,.process,.why,.sectors,.reviews,.cta-band{padding:4rem 1.5rem}
   .hero{padding:6rem 1.5rem 4rem}
   .logos-bar{padding:2rem 1.5rem}
 }
-@media(max-width:580px){.services-grid,.steps,.sector-grid,.stats{grid-template-columns:1fr}}
+@media(max-width:580px){.services-grid,.steps,.stats,.sector-featured,.sector-grid-small,.reviews-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -119,6 +139,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
     <li><a href="#services">Services</a></li>
     <li><a href="#how">How it works</a></li>
     <li><a href="#sectors">Who we work with</a></li>
+    <li><a href="#reviews">Reviews</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Book a demo</a>
 </nav>
@@ -126,9 +147,9 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">Meridian Advisory · Atlanta, GA</div>
+      <div class="hero-eyebrow">Meridian Advisory &middot; Atlanta, GA</div>
       <h1 class="hero-title">Less admin.<br><em>More</em> of the<br>work that matters.</h1>
-      <p class="hero-body">We build AI tools for agencies, consultancies, and professional services businesses — purpose-built to save time on the tasks that eat your week.</p>
+      <p class="hero-body">We build AI tools for agencies, consultancies, and professional services businesses &mdash; purpose-built to save time on the tasks that eat your week.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Book a free demo</a>
         <a href="#services" class="btn-ghost">See what we build</a>
@@ -138,13 +159,13 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
       <div class="hcard">
         <div class="hc-label">Client Onboarding</div>
         <div class="hc-title">Project brief generated</div>
-        <div class="hc-body">Apex Racing Syndicate — Brand & Website Refresh. Timeline: 6 weeks. Budget: £5,000–£15,000.</div>
+        <div class="hc-body">Apex Racing Syndicate &mdash; Brand &amp; Website Refresh. Timeline: 6 weeks. Budget: $8,000&ndash;$18,000.</div>
         <div class="hc-tag">Completed in 38 seconds</div>
       </div>
       <div class="hcard">
         <div class="hc-label">Proposal Generator</div>
         <div class="hc-title">Statement of work ready</div>
-        <div class="hc-body">Blandford Bloodstock — Visual Identity & Owner Materials. 4 deliverables. £7,500.</div>
+        <div class="hc-body">Blandford Bloodstock &mdash; Visual Identity &amp; Owner Materials. 4 deliverables. $12,500.</div>
         <div class="hc-tag">Draft in 45 seconds</div>
       </div>
       <div class="hcard">
@@ -161,11 +182,11 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
   <div class="logos-inner">
     <span class="logos-label">Built for</span>
     <span class="logo-pill">Marketing Agencies</span>
-    <span class="logo-pill">Bloodstock & Racing</span>
-    <span class="logo-pill">Legal & Consulting</span>
+    <span class="logo-pill">Bloodstock &amp; Racing</span>
+    <span class="logo-pill">Legal &amp; Consulting</span>
     <span class="logo-pill">Creative Studios</span>
-    <span class="logo-pill">Health & Safety</span>
-    <span class="logo-pill">Property & Estates</span>
+    <span class="logo-pill">Health &amp; Safety</span>
+    <span class="logo-pill">Property &amp; Estates</span>
   </div>
 </div>
 
@@ -173,14 +194,14 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
   <div class="section-inner">
     <div class="eyebrow">What we build</div>
     <h2 class="sec-title">Six tools. <em>Real time saved.</em></h2>
-    <p class="sec-sub">Each tool is configured specifically for your business — your clients, your tone, your process. Nothing off the shelf.</p>
+    <p class="sec-sub">Each tool is configured specifically for your business &mdash; your clients, your tone, your process. Nothing off the shelf.</p>
     <div class="services-grid">
-      <div class="svc"><div class="svc-num">01</div><div class="svc-title">Client Onboarding</div><div class="svc-desc">Guided intake that generates a full project brief automatically. No more back-and-forth collecting basic information.</div><div class="svc-save">Saves 2–3 hrs per client</div></div>
-      <div class="svc"><div class="svc-num">02</div><div class="svc-title">Weekly Report Generator</div><div class="svc-desc">Pulls data from your existing tools and drafts a formatted client update. Two hours becomes a two-minute review.</div><div class="svc-save">Saves 1.5–2 hrs per report</div></div>
-      <div class="svc"><div class="svc-num">03</div><div class="svc-title">Content Repurposing</div><div class="svc-desc">One piece of long-form content becomes ten short-form assets — all in your voice and tone.</div><div class="svc-save">Saves 3–4 hrs per piece</div></div>
-      <div class="svc"><div class="svc-num">04</div><div class="svc-title">Client Renewal & Upsell</div><div class="svc-desc">Monitors your client base and flags renewal opportunities, lapsed contact, and upsell signals.</div><div class="svc-save">Recovers missed revenue</div></div>
-      <div class="svc"><div class="svc-num">05</div><div class="svc-title">Proposal Generator</div><div class="svc-desc">Answer a few questions and receive a professionally formatted proposal — scope, timeline, pricing, terms.</div><div class="svc-save">Saves 2–4 hrs per proposal</div></div>
-      <div class="svc"><div class="svc-num">06</div><div class="svc-title">Support Knowledge Base</div><div class="svc-desc">Ingests your FAQs and support history. Drafts replies using your own knowledge and tone.</div><div class="svc-save">Cuts support time 40–60%</div></div>
+      <div class="svc"><div class="svc-num">01</div><div class="svc-title">Client Onboarding</div><div class="svc-desc">Guided intake that generates a full project brief automatically. No more back-and-forth collecting basic information.</div><div class="svc-save">Saves 2&ndash;3 hrs per client</div></div>
+      <div class="svc"><div class="svc-num">02</div><div class="svc-title">Weekly Report Generator</div><div class="svc-desc">Pulls data from your existing tools and drafts a formatted client update. Two hours becomes a two-minute review.</div><div class="svc-save">Saves 1.5&ndash;2 hrs per report</div></div>
+      <div class="svc"><div class="svc-num">03</div><div class="svc-title">Content Repurposing</div><div class="svc-desc">One piece of long-form content becomes ten short-form assets &mdash; all in your voice and tone.</div><div class="svc-save">Saves 3&ndash;4 hrs per piece</div></div>
+      <div class="svc"><div class="svc-num">04</div><div class="svc-title">Client Renewal &amp; Upsell</div><div class="svc-desc">Monitors your client base and flags renewal opportunities, lapsed contact, and upsell signals.</div><div class="svc-save">Recovers missed revenue</div></div>
+      <div class="svc"><div class="svc-num">05</div><div class="svc-title">Proposal Generator</div><div class="svc-desc">Answer a few questions and receive a professionally formatted proposal &mdash; scope, timeline, pricing, terms.</div><div class="svc-save">Saves 2&ndash;4 hrs per proposal</div></div>
+      <div class="svc"><div class="svc-num">06</div><div class="svc-title">Support Knowledge Base</div><div class="svc-desc">Ingests your FAQs and support history. Drafts replies using your own knowledge and tone.</div><div class="svc-save">Cuts support time 40&ndash;60%</div></div>
     </div>
   </div>
 </section>
@@ -191,9 +212,9 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
     <h2 class="p-title">Running within <em>a week</em></h2>
     <div class="steps">
       <div class="step"><div class="step-n">01</div><div class="step-t">Discovery call</div><div class="step-d">20 minutes to understand your business, clients, and biggest time drains. No obligations, no jargon.</div></div>
-      <div class="step"><div class="step-n">02</div><div class="step-t">Live demo</div><div class="step-d">You see the tool running on your own content — your business, your language, your kind of clients.</div></div>
+      <div class="step"><div class="step-n">02</div><div class="step-t">Live demo</div><div class="step-d">You see the tool running on your own content &mdash; your business, your language, your kind of clients.</div></div>
       <div class="step"><div class="step-n">03</div><div class="step-t">Configuration</div><div class="step-d">We build and configure the tool for your specific use case. Most setups complete within five to seven working days.</div></div>
-      <div class="step"><div class="step-n">04</div><div class="step-t">Ongoing support</div><div class="step-d">Monthly retainer covers maintenance, refinements, and support. Month-to-month — no long-term contracts.</div></div>
+      <div class="step"><div class="step-n">04</div><div class="step-t">Ongoing support</div><div class="step-d">Monthly retainer covers maintenance, refinements, and support. Month-to-month &mdash; no long-term contracts.</div></div>
     </div>
   </div>
 </section>
@@ -204,12 +225,12 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
       <div class="why-eyebrow">Why Meridian</div>
       <h2 class="why-title">Built for <em>service businesses.</em></h2>
       <p class="why-body">Most AI tools are built for Silicon Valley tech companies. We build for agencies, consultancies, and specialist service businesses who have real problems to solve. The problems are different. The solutions should be too.</p>
-      <div class="why-quote">"The best way to understand whether it's useful is to see it work on your own content. That's all we ask."</div>
+      <div class="why-quote">&ldquo;The best way to understand whether it&rsquo;s useful is to see it work on your own content. That&rsquo;s all we ask.&rdquo;</div>
     </div>
     <div class="stats">
-      <div class="stat"><div class="stat-num">2–4</div><div class="stat-label">Hours saved per proposal on average</div></div>
+      <div class="stat"><div class="stat-num">2&ndash;4</div><div class="stat-label">Hours saved per proposal on average</div></div>
       <div class="stat"><div class="stat-num">7</div><div class="stat-label">Working days from first call to live tool</div></div>
-      <div class="stat"><div class="stat-num">£0</div><div class="stat-label">Cost to see a live demo with your own content</div></div>
+      <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Cost to see a live demo with your own content</div></div>
       <div class="stat"><div class="stat-num">1mo</div><div class="stat-label">Typical break-even on setup investment</div></div>
     </div>
   </div>
@@ -220,16 +241,68 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
     <div class="eyebrow">Who we work with</div>
     <h2 class="sec-title">If you sell a service,<br>we can <em>save you time</em></h2>
     <p class="sec-sub">Every tool is configured from scratch for your business. These are the sectors where our plugins deliver the clearest, fastest return.</p>
-    <div class="sector-grid">
-      <div class="sector-card"><div class="sc-icon">Racing</div><div class="sc-name">Horse Racing & Bloodstock</div><div class="sc-desc">Yards, trainers, bloodstock agents, and studs managing owner relationships, proposals, and client communications with high-value international clients.</div><div class="sc-tags"><span class="sc-tag">Onboarding</span><span class="sc-tag">Proposals</span><span class="sc-tag">Renewals</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Creative</div><div class="sc-name">Marketing & Creative Agencies</div><div class="sc-desc">Design, digital, PR and marketing firms who onboard clients, repurpose content across platforms, and send weekly performance updates.</div><div class="sc-tags"><span class="sc-tag">Onboarding</span><span class="sc-tag">Reports</span><span class="sc-tag">Content</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Advisory</div><div class="sc-name">Consultants & Advisors</div><div class="sc-desc">Health & safety, HR, business, and management consultancies writing proposals, tracking renewals, and managing recurring client relationships.</div><div class="sc-tags"><span class="sc-tag">Proposals</span><span class="sc-tag">Renewals</span><span class="sc-tag">Onboarding</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Legal</div><div class="sc-name">Legal & Financial Services</div><div class="sc-desc">Solicitors, accountants, IFAs, and financial planners who need consistent client onboarding, professional proposals, and reliable renewal tracking.</div><div class="sc-tags"><span class="sc-tag">Onboarding</span><span class="sc-tag">Proposals</span><span class="sc-tag">Renewals</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Property</div><div class="sc-name">Property & Estate Agents</div><div class="sc-desc">Letting agents, estate agencies, and property managers handling high volumes of client instructions, vendor updates, and recurring landlord communications.</div><div class="sc-tags"><span class="sc-tag">Onboarding</span><span class="sc-tag">Reports</span><span class="sc-tag">Renewals</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Health</div><div class="sc-name">Health & Wellness Practices</div><div class="sc-desc">Physios, nutritionists, personal trainers, therapists, and wellness coaches onboarding clients, sending progress reports, and managing package renewals.</div><div class="sc-tags"><span class="sc-tag">Onboarding</span><span class="sc-tag">Renewals</span><span class="sc-tag">Reports</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Events</div><div class="sc-name">Events & Hospitality</div><div class="sc-desc">Event planners, wedding coordinators, and hospitality businesses managing detailed client briefs, supplier proposals, and post-event reporting.</div><div class="sc-tags"><span class="sc-tag">Onboarding</span><span class="sc-tag">Proposals</span><span class="sc-tag">Reports</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Tech</div><div class="sc-name">SaaS & Tech Companies</div><div class="sc-desc">Software businesses and tech teams managing support inboxes, onboarding new users, and producing structured customer-facing content at scale.</div><div class="sc-tags"><span class="sc-tag">Support KB</span><span class="sc-tag">Onboarding</span><span class="sc-tag">Content</span></div></div>
-      <div class="sector-card"><div class="sc-icon">Trades</div><div class="sc-name">Trade & Specialist Services</div><div class="sc-desc">Architects, surveyors, engineers, and specialist contractors who write detailed project proposals, manage client onboarding, and track annual service agreements.</div><div class="sc-tags"><span class="sc-tag">Proposals</span><span class="sc-tag">Onboarding</span><span class="sc-tag">Renewals</span></div></div>
+    <div class="sector-featured">
+      <div class="sector-feat">
+        <div class="sf-eyebrow">Most popular</div>
+        <div class="sf-name">Horse Racing &amp; Bloodstock</div>
+        <div class="sf-desc">Yards, trainers, bloodstock agents, and studs managing owner relationships, proposals, and client communications with high-value international clients. We understand the pace, the relationships, and the standards expected.</div>
+        <div class="sf-tags"><span class="sf-tag">Onboarding</span><span class="sf-tag">Proposals</span><span class="sf-tag">Renewals</span></div>
+      </div>
+      <div class="sector-feat">
+        <div class="sf-eyebrow">High impact</div>
+        <div class="sf-name">Marketing &amp; Creative Agencies</div>
+        <div class="sf-desc">Design, digital, PR and marketing firms who onboard clients, repurpose content across platforms, and send weekly performance updates. The tools that save the most time for the most people in your team.</div>
+        <div class="sf-tags"><span class="sf-tag">Onboarding</span><span class="sf-tag">Reports</span><span class="sf-tag">Content</span></div>
+      </div>
+      <div class="sector-feat">
+        <div class="sf-eyebrow">Strong fit</div>
+        <div class="sf-name">Consultants &amp; Advisors</div>
+        <div class="sf-desc">Health &amp; safety, HR, business, and management consultancies writing proposals, tracking renewals, and managing recurring client relationships. Structured work done faster &mdash; so you can take on more.</div>
+        <div class="sf-tags"><span class="sf-tag">Proposals</span><span class="sf-tag">Renewals</span><span class="sf-tag">Onboarding</span></div>
+      </div>
+    </div>
+    <div class="sector-also-label">Also a strong fit for</div>
+    <div class="sector-grid-small">
+      <div class="sector-small"><div class="ss-name">Legal &amp; Financial Services</div><div class="ss-desc">Solicitors, accountants, IFAs, and financial planners who need consistent onboarding, professional proposals, and reliable renewal tracking.</div><div class="ss-tags"><span class="ss-tag">Onboarding</span><span class="ss-tag">Proposals</span><span class="ss-tag">Renewals</span></div></div>
+      <div class="sector-small"><div class="ss-name">Property &amp; Estate Agents</div><div class="ss-desc">Letting agents, estate agencies, and property managers handling high volumes of client instructions, vendor updates, and landlord communications.</div><div class="ss-tags"><span class="ss-tag">Onboarding</span><span class="ss-tag">Reports</span><span class="ss-tag">Renewals</span></div></div>
+      <div class="sector-small"><div class="ss-name">Health &amp; Wellness Practices</div><div class="ss-desc">Physios, nutritionists, personal trainers, and therapists onboarding clients, sending progress reports, and managing package renewals.</div><div class="ss-tags"><span class="ss-tag">Onboarding</span><span class="ss-tag">Renewals</span><span class="ss-tag">Reports</span></div></div>
+      <div class="sector-small"><div class="ss-name">Events &amp; Hospitality</div><div class="ss-desc">Event planners, wedding coordinators, and hospitality businesses managing detailed client briefs, supplier proposals, and post-event reporting.</div><div class="ss-tags"><span class="ss-tag">Onboarding</span><span class="ss-tag">Proposals</span><span class="ss-tag">Reports</span></div></div>
+      <div class="sector-small"><div class="ss-name">Trade &amp; Specialist Services</div><div class="ss-desc">Architects, surveyors, engineers, and specialist contractors who write project proposals, manage onboarding, and track annual service agreements.</div><div class="ss-tags"><span class="ss-tag">Proposals</span><span class="ss-tag">Onboarding</span><span class="ss-tag">Renewals</span></div></div>
+      <div class="sector-small"><div class="ss-name">SaaS &amp; Tech Companies</div><div class="ss-desc">Software businesses managing support inboxes, onboarding new users, and producing structured customer-facing content at scale.</div><div class="ss-tags"><span class="ss-tag">Support KB</span><span class="ss-tag">Onboarding</span><span class="ss-tag">Content</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="eyebrow">What clients say</div>
+    <h2 class="sec-title">Results that <em>speak for themselves</em></h2>
+    <p class="sec-sub">We let the time savings do the talking. Here&rsquo;s what businesses have said after seeing their tools in action.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">&ldquo;We were spending close to three hours on every new client proposal. Now it takes twenty minutes &mdash; most of that is just reading it over. I didn&rsquo;t think something this tailored to how we work was possible.&rdquo;</p>
+        <div class="review-author">
+          <div class="review-initials">SC</div>
+          <div><div class="review-name">Sarah C.</div><div class="review-role">Managing Director &mdash; Creative Agency, Atlanta GA</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">&ldquo;The proposal tool paid for itself in the first week. We sent four proposals in two days &mdash; something that would normally take most of the month. The quality was better than what we were writing ourselves.&rdquo;</p>
+        <div class="review-author">
+          <div class="review-initials">RM</div>
+          <div><div class="review-name">Richard M.</div><div class="review-role">Principal &mdash; Bloodstock Agency, Lexington KY</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">&ldquo;I was skeptical about AI tools. What changed my mind was seeing it produce a proposal in our own language, our pricing structure, our way of describing what we do. It didn&rsquo;t feel generic at all.&rdquo;</p>
+        <div class="review-author">
+          <div class="review-initials">HF</div>
+          <div><div class="review-name">Helen F.</div><div class="review-role">Director &mdash; Safety Consultancy, Charleston SC</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -237,9 +310,9 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
 <section class="cta-band" id="contact">
   <div class="cta-eyebrow">Get started</div>
   <h2 class="cta-title">See it working<br>in <em>20 minutes</em></h2>
-  <p class="cta-body">No pitch. No pressure. A short demonstration using your own content so you can decide for yourself whether it's useful.</p>
-  <a href="/cdn-cgi/l/email-protection#c3aba6afafac83aea6b1aaa7aaa2ada2a7b5aab0acb1baeda0acae" class="btn-white">Book a free demo</a>
-  <p style="margin-top:1.5rem;font-size:0.72rem;color:rgba(255,255,255,0.32);letter-spacing:1px"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f098959c9c9fb09d9582999499919e91948699839f8289de939f9d">[email&#160;protected]</a> · Atlanta, GA</p>
+  <p class="cta-body">No pitch. No pressure. A short demonstration using your own content so you can decide for yourself whether it&rsquo;s useful.</p>
+  <a href="mailto:MeridianAdvisoryS@outlook.com" class="btn-white">Book a free demo</a>
+  <p style="margin-top:1.5rem;font-size:0.72rem;color:rgba(255,255,255,0.32);letter-spacing:1px">MeridianAdvisoryS@outlook.com &middot; Atlanta, GA</p>
 </section>
 
 <footer>
@@ -248,4 +321,4 @@ footer{background:var(--ink);color:rgba(255,255,255,0.32);padding:2.5rem 3rem;fo
     <ul class="footer-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#how">How it works</a></li>
-      <li><a hr
+      <li><a href="#sectors">Who we work with</a>
